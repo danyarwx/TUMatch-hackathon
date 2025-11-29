@@ -1,0 +1,34 @@
+{
+  "name": "Friendship",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "The user who initiated"
+    },
+    "friend_id": {
+      "type": "string",
+      "description": "The friend's user ID"
+    },
+    "friend_name": {
+      "type": "string",
+      "description": "Friend's display name"
+    },
+    "friend_photo": {
+      "type": "string",
+      "description": "Friend's profile photo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "user_id",
+    "friend_id"
+  ]
+}

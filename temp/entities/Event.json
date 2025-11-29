@@ -1,0 +1,84 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Event title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Event description"
+    },
+    "location": {
+      "type": "string",
+      "description": "Event location"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Event cover image URL"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event start time"
+    },
+    "organizer_name": {
+      "type": "string",
+      "description": "Organizer full name"
+    },
+    "organizer_id": {
+      "type": "string",
+      "description": "Organizer user ID for profile linking"
+    },
+    "organizer_photo": {
+      "type": "string",
+      "description": "Organizer profile photo URL"
+    },
+    "organizer_department": {
+      "type": "string",
+      "description": "Organizer department/faculty"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "study",
+        "coffee",
+        "hackathon",
+        "sports",
+        "social",
+        "workshop",
+        "other"
+      ],
+      "description": "Event category"
+    },
+    "max_participants": {
+      "type": "number",
+      "description": "Maximum number of participants"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "List of participants"
+    }
+  },
+  "required": [
+    "title",
+    "location",
+    "start_time",
+    "organizer_name"
+  ]
+}

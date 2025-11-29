@@ -1,0 +1,46 @@
+{
+  "name": "Moment",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Reference to the event"
+    },
+    "event_title": {
+      "type": "string",
+      "description": "Event title for display"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Saved photo URL"
+    },
+    "location": {
+      "type": "string",
+      "description": "Event location"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the event took place"
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Who was at the event"
+    }
+  },
+  "required": [
+    "event_id",
+    "photo_url"
+  ]
+}
